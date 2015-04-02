@@ -1,21 +1,12 @@
-p#notice = notice
-
-p
-  strong Name:
-  = @book.name
-p
-  strong Author:
-  = @book.author
-p
-  strong Description:
-  = @book.description
-p
-  strong Price:
-  = @book.price
-p
-  strong Availability:
-  = @book.availability
+.container
+  .row
+    .col-md-6 = image_tag "book.jpg", class: "img-responsive"
+    .col-md-6
+      .col-md-6
+        h3 #{@book.name} by #{@book.author}
+        p.justify #{@book.description}
+        h4.text-right $ #{@book.price.to_f / 100}
 
 = link_to 'Edit', edit_book_path(@book)
-'|
+|  | 
 = link_to 'Back', books_path
