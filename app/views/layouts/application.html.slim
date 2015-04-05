@@ -8,5 +8,11 @@ html
     = csrf_meta_tags
   body
     = render 'layouts/header'
+    / .container
+    - flash.each do |type, message|
+      .alert.alert-info.fade-in
+        button.close data-dismiss="alert" x
+        = message
+        
     .container
       = yield
