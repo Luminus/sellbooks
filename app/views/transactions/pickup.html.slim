@@ -1,2 +1,5 @@
-h1 Transaction#pickup
-p Find me in app/views/transaction/pickup.html.slim
+.row.text-center
+  h1 Congratulations on your order #{@sale.guid}
+
+  p Here is your download link: 
+  =link_to "Download", @book.resource.url

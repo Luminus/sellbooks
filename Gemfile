@@ -54,6 +54,11 @@ gem 'dotenv-rails', groups: [:development]
 # Use Amazon AWS to store files. Had to use a pre 2.0 version to resolve some shenanigans
 gem 'aws-sdk', '< 2.0'
 
+group :development do
+  gem "better_errors"
+  gem "binding_of_caller"
+end
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

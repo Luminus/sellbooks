@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-  get 'transaction/create'
-
-  get 'transaction/pickup'
 
   resources :books
 
@@ -10,6 +7,10 @@ Rails.application.routes.draw do
   root 'pages#home'
 
   get 'dashboard' => 'pages#dashboard'
+
+  post '/buy/:slug' => 'transactions#create', as: :buy
+
+  get '/pickup/:guid' => 'transactions#pickup', as: :pickup 
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
