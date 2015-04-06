@@ -5,6 +5,8 @@ class PagesController < ApplicationController
     if current_user # If user is logged in
       redirect_to books_path
     end
+
+    @books = Book.last(4)
   end
 
   def dashboard

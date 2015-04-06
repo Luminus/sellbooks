@@ -45,6 +45,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'dotenv-rails', groups: [:development]
 
+# Use Amazon AWS to store files. Had to use a pre 2.0 version to resolve some shenanigans
 gem 'aws-sdk', '< 2.0'
 
 # Use ActiveModel has_secure_password
