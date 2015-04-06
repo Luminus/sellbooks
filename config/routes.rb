@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'transaction/create'
+
+  get 'transaction/pickup'
+
   resources :books
 
   devise_for :users

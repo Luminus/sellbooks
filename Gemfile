@@ -37,6 +37,9 @@ gem "paperclip"
 # Use Friendly_ID to enable pretty URLs
 gem 'friendly_id'
 
+# Use stripe for Payment
+gem 'stripe'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
