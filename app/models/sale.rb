@@ -33,7 +33,7 @@ class Sale < ActiveRecord::Base
         description: "Sell Books"
       )
       self.update(stripe_id: charge.id)
-      self.finish
+      self.finish!
     rescue Stripe::StripeError => e
       self.update_attributes(error: e.message)
       self.fail!
